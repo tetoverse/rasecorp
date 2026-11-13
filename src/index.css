@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0c0b10;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom scrollbar matching Phantom */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0b10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242232;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b3752;
+}
+
+/* Phantom glassmorphism card */
+.phantom-card {
+  background: radial-gradient(120% 120% at 50% 0%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%), #13111a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+}
+
+.phantom-card:hover {
+  border-color: rgba(171, 159, 242, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(171, 159, 242, 0.12);
+}
+
+/* Ambient glow blobs */
+.ambient-glow-purple {
+  background: radial-gradient(circle, rgba(171, 159, 242, 0.18) 0%, rgba(125, 102, 217, 0.08) 50%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.ambient-glow-cyan {
+  background: radial-gradient(circle, rgba(108, 160, 251, 0.15) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
